@@ -14,6 +14,9 @@
                 <h1><a href="">{{ post.title }}</a></h1>
                 <p>posted: {{ post.published_date }}</p>
                 <p>{{ post.text|linebreaksbr }}</p>
+                {% block content %}
+                <img src="{{ post.photo.url }}"" width="350" height="500"/>
+                {% endblock %}
             </div>
         {% endfor %}        
     </body>    
